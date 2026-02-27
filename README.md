@@ -7,7 +7,7 @@
 Use this URL for the source of the module. See the usage examples below for more details.
 
 ```hcl
-github.com/pbs/terraform-aws-app-mesh-module?ref=0.0.30
+github.com/pbs/terraform-aws-app-mesh-module?ref=x.y.z
 ```
 
 ### Alternative Installation Methods
@@ -22,7 +22,7 @@ Integrate this module like so:
 
 ```hcl
 module "app_mesh" {
-  source = "github.com/pbs/terraform-aws-app-mesh-module?ref=0.0.30"
+  source = "github.com/pbs/terraform-aws-app-mesh-module?ref=x.y.z"
 
   # Tagging Parameters
   organization = var.organization
@@ -38,7 +38,7 @@ module "app_mesh" {
 
 If this repo is added as a subtree, then the version of the module should be close to the version shown here:
 
-`0.0.30`
+`x.y.z`
 
 Note, however that subtrees can be altered as desired within repositories.
 
@@ -54,8 +54,8 @@ Below is automatically generated documentation on this Terraform module using [t
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.2 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.5.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.13.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 6.0.0 |
 
 ## Providers
 
@@ -84,6 +84,7 @@ No modules.
 | <a name="input_repo"></a> [repo](#input\_repo) | Tag used to point to the repo using this module | `string` | n/a | yes |
 | <a name="input_is_egress_allowed"></a> [is\_egress\_allowed](#input\_is\_egress\_allowed) | Determines whether egress is allowed from the app mesh. | `bool` | `true` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name of the app mesh. Will default to product if not defined. | `string` | `null` | no |
+| <a name="input_owner"></a> [owner](#input\_owner) | Tag used to group resources according to owner | `string` | `"plops"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Extra tags | `map(string)` | `{}` | no |
 
 ## Outputs
